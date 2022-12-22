@@ -9,10 +9,8 @@ export default function App() {
 
   return (
     <SafeAreaProvider style={styles.container}>
-      <>
-        <TabScreens index={index} onIndexChange={setIndex} />
-        <TabOptions index={index} onIndexChange={setIndex} />
-      </>
+      <TabScreens index={index} onIndexChange={setIndex} />
+      <TabOptions index={index} onIndexChange={setIndex} />
     </SafeAreaProvider>
   );
 }
