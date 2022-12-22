@@ -1,12 +1,15 @@
-import { useState } from "react";
-import { Tab } from "@rneui/themed";
+import { Tab, TabProps } from "@rneui/themed";
 
-export default function TabOptions() {
-  const [index, setIndex] = useState(0);
+interface TabOptionsProps extends TabProps {
+  index: number;
+  onIndexChange: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export default function TabOptions({ index, onIndexChange }: TabOptionsProps) {
   return (
     <Tab
       value={index}
-      onChange={(e) => setIndex(e)}
+      onChange={(e) => onIndexChange(e)}
       indicatorStyle={{
         backgroundColor: "white",
         height: 3,
