@@ -1,4 +1,5 @@
 import { TabView, Text, TabViewProps } from "@rneui/themed";
+import UserProfileScreen from "../../screens/UserProfileScreen";
 
 interface TabScreensProps extends TabViewProps {
   index: number;
@@ -7,9 +8,14 @@ interface TabScreensProps extends TabViewProps {
 
 export default function TabScreens({ index, onIndexChange }: TabScreensProps) {
   return (
-    <TabView value={index} onChange={onIndexChange} animationType="spring">
+    <TabView
+      containerStyle={{ width: "100%" }}
+      value={index}
+      onChange={onIndexChange}
+      animationType="spring"
+    >
       <TabView.Item style={{ width: "100%" }}>
-        <Text h1>User profile</Text>
+        <UserProfileScreen />
       </TabView.Item>
       <TabView.Item style={{ width: "100%" }}>
         <Text h1>Transactions</Text>
