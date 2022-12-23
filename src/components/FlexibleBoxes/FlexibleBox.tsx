@@ -1,16 +1,16 @@
-import { View, ViewProps, ScrollView } from "react-native";
+import { View, ViewProps, ScrollView, ScrollViewProps } from "react-native";
 import { StyleSheet } from "react-native";
 
 export function FlexibleBox({ style, ...props }: ViewProps) {
   return <View {...props} style={[styles.flexibleBox, style]} />;
 }
 
-export function FlexibleScrollBox({ style, ...props }: ViewProps) {
+export function FlexibleScrollBox({ style, contentContainerStyle, ...props }: ScrollViewProps) {
   return (
     <ScrollView
       {...props}
       style={[styles.flexibleScrollView, style]}
-      contentContainerStyle={styles.flexibleScrollViewContentContainer}
+      contentContainerStyle={[styles.flexibleScrollViewContentContainer, contentContainerStyle]}
     />
   );
 }
