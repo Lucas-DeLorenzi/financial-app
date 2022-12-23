@@ -23,14 +23,14 @@ export default function FriendsScreen() {
                 size={"large"}
                 rounded
                 icon={{ name: "person-circle-outline", type: "ionicon" }}
-                containerStyle={{ backgroundColor: "rgb(32, 137, 220)" }}
+                containerStyle={styles.avatarContainer}
               />
               <ListItem.Content>
                 <ListItem.Title style={{ width: "100%" }}>
                   <Text>{item.name.toUpperCase()}</Text>
                 </ListItem.Title>
                 <ListItem.Subtitle>
-                  <Text>{item.email.toUpperCase()}</Text>
+                  <Text>{item.email}</Text>
                 </ListItem.Subtitle>
               </ListItem.Content>
             </ListItem>
@@ -45,4 +45,5 @@ const styles = StyleSheet.create({
   accountsContainer: {
     width: "90%",
   },
+  avatarContainer: { backgroundColor: "rgb(32, 137, 220)" },
 });
