@@ -1,6 +1,7 @@
 import { TabView, Text, TabViewProps } from "@rneui/themed";
 import UserProfileScreen from "../../screens/UserProfileScreen";
 import TransactionsScreen from "../../screens/TransactionsScreen";
+import FriendsScreen from "../../screens/FriendsScreen";
 
 interface TabScreensProps extends TabViewProps {
   index: number;
@@ -22,7 +23,7 @@ export default function TabScreens({ index, onIndexChange }: TabScreensProps) {
         <TransactionsScreen />
       </TabView.Item>
       <TabView.Item style={{ width: "100%" }}>
-        <Text h1>Friends</Text>
+        <FriendsScreen />
       </TabView.Item>
     </TabView>
   );
