@@ -1,16 +1,16 @@
 import { View, ViewProps } from "react-native";
 import { StyleSheet } from "react-native";
 
-export function Screen({ ...props }: ViewProps) {
-  return <View {...props} style={styles.screenContainer} />;
+export function Screen({ style, ...props }: ViewProps) {
+  return <View {...props} style={[styles.screenContainer, style]} />;
 }
 
-export function ScreenHeader({ ...props }: ViewProps) {
-  return <View {...props} style={styles.screenHeader} />;
+export function ScreenHeader({ style, ...props }: ViewProps) {
+  return <View {...props} style={[styles.screenHeader, style]} />;
 }
 
-export function ScreenMain({ ...props }: ViewProps) {
-  return <View {...props} style={styles.screenMain} />;
+export function ScreenMain({ style, ...props }: ViewProps) {
+  return <View {...props} style={[styles.screenMain, style]} />;
 }
 
 const styles = StyleSheet.create({
@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
   },
   screenHeader: {
     flex: 1,
-    flexDirection:"row",
+    flexDirection: "row",
     alignSelf: "flex-start",
     justifyContent: "space-around",
     width: "100%",
     paddingTop: "15%",
-    paddingHorizontal:"5%",
-    backgroundColor:"#F5F5F5"
+    paddingHorizontal: "5%",
+    backgroundColor: "#F5F5F5",
   },
   screenMain: {
     flex: 1,
